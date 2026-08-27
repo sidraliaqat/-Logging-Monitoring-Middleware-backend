@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "Logging Middleware Demo",
+    "description": "Test requests for the Express logging & error middleware. Import this into Postman, then set the `baseUrl` variable if needed (defaults to http://localhost:3000).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" }
+  ],
+  "item": [
+    {
+      "name": "GET / (success)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/"
+      }
+    },
+    {
+      "name": "GET /users/:id (success)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/users/42"
+      }
+    },
+    {
+      "name": "POST /users (success, with body)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ada\"\n}"
+        },
+        "url": "{{baseUrl}}/users"
+      }
+    },
+    {
+      "name": "GET /error (triggers error logger)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/error"
+      }
+    },
+    {
+      "name": "GET /slow (tests duration logging)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/slow"
+      }
+    },
+    {
+      "name": "GET /does-not-exist (404)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/does-not-exist"
+      }
+    }
+  ]
+}

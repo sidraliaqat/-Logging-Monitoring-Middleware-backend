@@ -1,0 +1,44 @@
+[2026-08-25T08:50:10.817Z] [REQUEST] GET / 200 0.96ms
+[2026-08-25T08:50:23.770Z] [ERROR] Unhandled error on GET /users/hi
+Error: Please enter id in numbers
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\app.js:19:17
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:280:10)
+[2026-08-25T08:50:23.772Z] [REQUEST] GET /users/hi 400 1.64ms
+[2026-08-25T08:50:55.765Z] [REQUEST] POST /users 201 1.05ms
+[2026-08-25T08:51:11.429Z] [REQUEST] POST /users 201 0.82ms
+[2026-08-25T08:51:37.211Z] [ERROR] Unhandled error on GET /error
+Error: Something went wrong on purpose
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\app.js:33:11
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:280:10)
+    at requestLogger (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\middleware\requestLogger.js:18:3)
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+[2026-08-25T08:51:37.212Z] [REQUEST] GET /error 500 1.67ms
+[2026-08-25T08:52:15.032Z] [ERROR] Unhandled error on GET /error
+Error: Something went wrong on purpose
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\app.js:33:11
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\index.js:280:10)
+    at requestLogger (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\middleware\requestLogger.js:18:3)
+    at Layer.handle [as handle_request] (C:\Users\AS\Downloads\logging-middleware-demo\logging-middleware-demo\node_modules\express\lib\router\layer.js:95:5)
+[2026-08-25T08:52:15.034Z] [REQUEST] GET /error 500 1.47ms
+[2026-08-25T08:53:02.443Z] [REQUEST] GET /slow 200 315.00ms
+[2026-08-25T08:53:17.278Z] [REQUEST] GET /does-not-exist 404 3.64ms
